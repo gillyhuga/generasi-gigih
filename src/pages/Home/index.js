@@ -1,10 +1,9 @@
 import React from "react";
 import SearchBar from "../../component/SearchBar";
-import './index.css';
+import './style.css';
 
 
 function Home() {
-
     return (
         <div>
             <h1>Exercise Module 2 - Session 1</h1>

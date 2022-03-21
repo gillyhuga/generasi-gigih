@@ -1,9 +1,8 @@
 import React from "react";
-import './index.css';
+import './style.css';
 
 
 function SearchBar() {
-
     return (
         <div>
             <form>
