@@ -1,0 +1,19 @@
+img {
+    border-radius: 20px;
+  }
+
+  .card {
+    display: grid;
+    border-radius: 18px;
+    margin: 20px auto;
+    width: 200px;
+    height: 350px
+  }
+
+  .card-image {
+    margin: auto;
+  }
+
+  .card-text h2 {
+    margin:0px;
+  }
