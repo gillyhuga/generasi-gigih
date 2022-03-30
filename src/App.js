@@ -1,5 +1,5 @@
 // import BasicLoop from "./pages/Example/module-2-example-4";
-import Home from "./pages/Home";
+import Search from "./pages/Search";
 import './App.css';
 
 // const giphy_secret_key = process.env.REACT_APP_GIPHY_KEY
@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Search />
     </div>
   );
 }
