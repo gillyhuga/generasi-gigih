@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import SearchBar from "../../component/SearchBar";
 import GifComponent from "../../component/Gif";
+
 import './style.css';
 
 function Search() {
@@ -22,8 +24,12 @@ function Search() {
 
     return (
         <div>
-            <input onChange={handleInput} />
-            <button onClick={getGifs}>Button</button>
+            <SearchBar
+                onChange={handleInput}
+                onClick={getGifs}
+            />
+            {/* <input onChange={handleInput} />
+            <button onClick={getGifs}>Button</button> */}
             <div className="container">
                 {gifs.length ?
                     gifs.filter(e => e.rating === 'g').map(e =>

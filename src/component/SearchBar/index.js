@@ -2,14 +2,13 @@ import React from "react";
 import './style.css';
 
 
-function SearchBar() {
+
+const SearchBar = ({ onChange, onClick }) => {
     return (
         <div>
-            <form>
-                <input type="text" placeholder="Search.." name="search"></input>
-                <button type="button">Button</button>
-            </form>
-        </div>
+            <input onChange={onChange} type="text" placeholder="Search.." name="search"></input>
+            <button onClick={onClick} type="button">Search</button>
+    </div>
     )
 }
 
