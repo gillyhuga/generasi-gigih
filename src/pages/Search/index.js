@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import SearchBar from "../../component/SearchBar";
 import GifComponent from "../../component/Gif";
+import { searchAction } from "../../redux/searchReducer";
 
 import './style.css';
 
 function Search() {
 
     const [gifs, setGifs] = useState([])
-    const [text, setText] = useState("")
+    // const [text, setText] = useState("")
+    const text = useSelector((state) => state.search.query);  
+    const dispatch = useDispatch();
 
-    const handleInput = (e) => setText(e.target.value);
+    const handleInput = (e) => dispatch(searchAction(e.target.value));
 
     useEffect(() => {
         getGifs()
