@@ -9,7 +9,6 @@ import './style.css';
 function Search() {
 
     const [gifs, setGifs] = useState([])
-    // const [text, setText] = useState("")
     const text = useSelector((state) => state.search.query);  
     const dispatch = useDispatch();
 
@@ -33,6 +32,7 @@ function Search() {
                 onChange={handleInput}
                 onClick={getGifs}
             />
+            
             <div className="container">
                 {gifs.length ?
                     gifs.filter(e => e.rating === 'g').map(e =>
