@@ -1,14 +1,16 @@
 import React from "react";
 import './style.css';
+import { Input } from '@chakra-ui/react'
+import { Button } from '@chakra-ui/react'
 
 
 
 const SearchBar = ({ onChange, onClick }) => {
     return (
         <div>
-            <input onChange={onChange} type="text" placeholder="Search.." name="search"></input>
-            <button onClick={onClick} type="button">Search</button>
-    </div>
+            <Input onChange={onChange} placeholder='Search' />
+            <Button onClick={onClick} >Search</Button>
+        </div>
     )
 }
 
