@@ -4,20 +4,18 @@ import SearchBar from "../../component/SearchBar";
 import GifComponent from "../../component/Gif";
 import { searchAction } from "../../redux/searchReducer";
 import { SimpleGrid, Box } from '@chakra-ui/react'
-
 import './style.css';
 
 function Search() {
-
-    const [gifs, setGifs] = useState([])
-    const text = useSelector((state) => state.search.query);
+    const [gifs, setGifs] = useState<any[]>([])
+    const text = useSelector((state: any) => state.search.query);
     const dispatch = useDispatch();
 
-    const handleInput = (e) => dispatch(searchAction(e.target.value));
+    const handleInput = (e:any) => dispatch(searchAction(e.target.value));
 
     useEffect(() => {
         getGifs()
-    }, []);
+    });
 
     const getGifs = async () => {
         const gifs = await fetch(
@@ -41,8 +39,7 @@ function Search() {
                             <GifComponent
                                 key={e.id}
                                 title={e.title}
-                                image={e.images.fixed_width.url}
-                        
+                                image={e.images.fixed_width.url} rating={undefined}                        
                             />
                         </Box>
 
@@ -50,24 +47,7 @@ function Search() {
                     :
                     null
                 }
-
-                {/* <Box bg='tomato' height='80px'></Box> */}
-
             </SimpleGrid>
-            {/* <div className="container">
-                {gifs.length ?
-                    gifs.filter(e => e.rating === 'g').map(e =>
-                        <GifComponent
-                            key={e.id}
-                            title={e.title}
-                            image={e.images.fixed_width.url}
-                            rating={e.rating}
-                        />
-                    )
-                    :
-                    null
-                }
-            </div> */}
         </div>
 
     );

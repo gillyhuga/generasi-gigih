@@ -1,5 +1,5 @@
 import './style.css';
-const ImageComponent = ({ title, image }) => {
+const ImageComponent = ({ title, image }:any) => {
     return (
         <div>
             <img src={image} alt="pic" />

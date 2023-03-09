@@ -3,12 +3,15 @@ import { createSlice } from "@reduxjs/toolkit";
 export const searchReducer = createSlice({
     name: "search",
     initialState: {
-        query: "",
+        query: " ",
     },
     reducers: {
         searchAction: (state, action) => {
            state.query = action.payload;
-        }
+        },
+        searchQuery: (state) => {
+            state.query = " ";
+         },
     }
 });
 

@@ -5,7 +5,7 @@ import { Button } from '@chakra-ui/react'
 
 
 
-const SearchBar = ({ onChange, onClick }) => {
+const SearchBar = ({ onChange, onClick }:any) => {
     return (
         <div>
             <Input onChange={onChange} placeholder='Search' />

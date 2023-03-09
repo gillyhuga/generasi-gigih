@@ -4,7 +4,7 @@ import GifComponent from "../../component/Gif";
 import './style.css';
 
 function Trending() {
-    const [trending, setTrending] = useState([])
+    const [trending, setTrending] = useState<any[]>([])
 
     useEffect(() => {
         getGifs();

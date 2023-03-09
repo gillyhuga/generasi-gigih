@@ -1,7 +1,7 @@
 import './style.css';
 import { Image} from '@chakra-ui/react'
 
-const GifComponent = ({ title, image, rating }) => {
+const GifComponent = ({ title, image, rating }:any) => {
     return (
         <div className='card'>
                 <Image src={image}  alt="gif" />

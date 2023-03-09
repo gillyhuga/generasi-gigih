@@ -6,3 +6,4 @@ export default configureStore({
         search: searchReducer,
     }
 }); 
+export type RootState = ReturnType<typeof configureStore>
